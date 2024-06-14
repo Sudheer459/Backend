@@ -62,6 +62,13 @@ pipeline {
                 }
             }
         }
+        stage('Deploy'){
+            steps{
+                script{
+                    build job: 'backend-deploy', parameters: [string(name: 'appVersion', value: 'stage')], propagate: false
+                }
+            }
+        }
     }   
     post {
         always {
