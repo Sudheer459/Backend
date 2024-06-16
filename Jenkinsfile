@@ -48,7 +48,7 @@ pipeline {
                         protocol: 'http',
                         nexusUrl: "${nexusUrl}",
                         groupId: 'com.expense',
-                        version: "${AppVersion}",
+                        version: "${appVersion}",
                         repository: 'Backend',
                         credentialsId: 'nexus-auth',
                         artifacts: [
